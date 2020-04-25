@@ -1,0 +1,95 @@
+<!--<article>
+  <div>
+    <h3>Angular com data-binding</h3>
+    <br>
+    <div>
+      <select #classe (change)="0">
+        <option value="nenhuma">Nenhuma</option>
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Informação</option>
+        <option value="alert-warning">Advertência</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div class="alert {{ classe.value }}" role="alert" style="position: absolute; left: 0; bottom: 0; right:0;" [style.display]="classe.value == 'nenhuma' ? 'none' : 'block'">{{ classe.value }}</div>
+</article>
+-->
+
+<article>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col">
+        <h2>Exemplo de componentes</h2>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Ação 1</a>
+            <a class="dropdown-item" href="#">Ação 2</a>
+            <a class="dropdown-item" href="#">Ação 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-1">
+      <div class="col">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <strong>Exemplo de alerta</strong> o botão de fechar funciona.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-5">
+      <div class="col">
+        <h2>Exemplo de formulário</h2>
+        <form>
+          <div class="form-group">
+            <label>Texto</label>
+            <input type="text" class="form-control" placeholder="Placeholder campo texto">
+          </div>
+  
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">Checkbox</label>
+          </div>
+  
+          <div class="form-group">
+            <label>Combobox</label>
+            <select class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label>Textarea</label>
+            <textarea class="form-control" rows="3" 
+              (keyup)="onKeyUp($event)" 
+              (blur)="salvarValor(valorInput.value)" 
+              #valorInput></textarea>
+            <p>Valor atual: {{ valorAtual }}</p>
+            <p>Valor salvo: {{ valorSalvo }}</p>
+            <span 
+              (mouseover)="onMouseOverOut()" 
+              (mouseout)="onMouseOverOut()" 
+              [class.destaque]="isMouseOver">Pause o mouse sobre mim...</span>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Salvar</button>
+          <button class="btn btn-default ml-2" (click)="botaoClicado()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
