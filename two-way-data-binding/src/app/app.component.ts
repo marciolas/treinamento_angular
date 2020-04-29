@@ -7,19 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Two-Way Data-Binding com Angular';
-
-  pessoa: any = {
-    nome: 'Márcio',
-    idade: 46,
-    endereco : {
-      logradouro: '',
-      numero: '',
-      cep: '',
-      bairro: '',
-      cidade: {
-        codigo: 0,
-        descricao: ''
-      }
-    }
-  }
 }
