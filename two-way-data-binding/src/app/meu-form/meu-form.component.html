@@ -1,0 +1,12 @@
+<section>
+    <article>
+        <div>
+            <h3>{{ title }}</h3>
+
+            <p>Seu nome é <strong>{{ pessoa.nome }}</strong> e você tem <strong>{{ pessoa.idade }}</strong>.</p>
+
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+        </div>
+    </article>
+</section>
