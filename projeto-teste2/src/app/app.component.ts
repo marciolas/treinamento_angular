@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Componente Spinner';
+  title = 'Angular CLI: Criando components, services com ng generate - Aula 18';
 }

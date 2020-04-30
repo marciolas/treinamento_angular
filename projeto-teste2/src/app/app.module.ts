@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MeuSpinnerComponent } from './meu-spinner/meu-spinner.component';
+import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeuSpinnerComponent
+    DiretivaNgifComponent
   ],
   imports: [
     BrowserModule
